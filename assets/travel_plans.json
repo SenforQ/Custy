@@ -1,0 +1,159 @@
+[
+  {
+    "city": "Paris",
+    "baseImage": "assets/paris_bg.webp",
+    "days": [
+      {
+        "day": 1,
+        "title": "Day 1 - Arrival & Eiffel Tower",
+        "activities": [
+          "Morning: Arrive in Paris and check into hotel",
+          "Afternoon: Visit the iconic Eiffel Tower and take photos",
+          "Evening: Enjoy a romantic dinner cruise on the Seine River",
+          "Night: Admire the Eiffel Tower light show"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Day 2 - Art & Culture",
+        "activities": [
+          "Morning: Explore the Louvre Museum and see the Mona Lisa",
+          "Afternoon: Stroll through the Tuileries Garden",
+          "Late Afternoon: Visit the Orsay Museum",
+          "Evening: Walk along the Champs-Élysées"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Day 3 - Historic Paris",
+        "activities": [
+          "Morning: Visit Notre-Dame Cathedral (exterior)",
+          "Afternoon: Explore the charming Montmartre district",
+          "Late Afternoon: Visit Sacré-Cœur Basilica",
+          "Evening: Enjoy local cuisine at a traditional French bistro"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Day 4 - Palace & Gardens",
+        "activities": [
+          "Morning: Day trip to the Palace of Versailles",
+          "Afternoon: Explore the magnificent gardens and Hall of Mirrors",
+          "Evening: Return to Paris and relax"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Day 5 - Shopping & Departure",
+        "activities": [
+          "Morning: Last-minute shopping at Galeries Lafayette",
+          "Afternoon: Visit the Latin Quarter and enjoy a farewell lunch",
+          "Evening: Depart from Paris with beautiful memories"
+        ]
+      }
+    ]
+  },
+  {
+    "city": "London",
+    "baseImage": "assets/london_bg.webp",
+    "days": [
+      {
+        "day": 1,
+        "title": "Day 1 - Arrival & Royal London",
+        "activities": [
+          "Morning: Arrive in London and check into hotel",
+          "Afternoon: Visit Buckingham Palace and watch the Changing of the Guard",
+          "Late Afternoon: Explore St. James's Park",
+          "Evening: Enjoy traditional fish and chips"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Day 2 - Historic Landmarks",
+        "activities": [
+          "Morning: Visit the Tower of London and see the Crown Jewels",
+          "Afternoon: Walk across Tower Bridge",
+          "Late Afternoon: Explore the British Museum",
+          "Evening: Experience the West End theatre district"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Day 3 - Culture & Markets",
+        "activities": [
+          "Morning: Visit the British Museum or Tate Modern",
+          "Afternoon: Explore Borough Market for local food",
+          "Late Afternoon: Walk along the South Bank",
+          "Evening: Enjoy a pub dinner in Covent Garden"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Day 4 - Royal & Modern",
+        "activities": [
+          "Morning: Visit Westminster Abbey",
+          "Afternoon: See Big Ben and Houses of Parliament",
+          "Late Afternoon: Explore Hyde Park and Kensington Gardens",
+          "Evening: Experience London's vibrant nightlife"
+        ]
+      }
+    ]
+  },
+  {
+    "city": "Barcelona",
+    "baseImage": "assets/barcelona_bg.webp",
+    "days": [
+      {
+        "day": 1,
+        "title": "Day 1 - Arrival & Gothic Quarter",
+        "activities": [
+          "Morning: Arrive in Barcelona and check into hotel",
+          "Afternoon: Explore the Gothic Quarter (Barri Gòtic)",
+          "Late Afternoon: Visit Barcelona Cathedral",
+          "Evening: Enjoy tapas at a local restaurant"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Day 2 - Gaudí's Masterpieces",
+        "activities": [
+          "Morning: Visit the iconic Sagrada Família",
+          "Afternoon: Explore Park Güell with its colorful mosaics",
+          "Late Afternoon: Walk along Passeig de Gràcia",
+          "Evening: See Casa Batlló and Casa Milà (La Pedrera)"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Day 3 - Beach & Markets",
+        "activities": [
+          "Morning: Visit La Boqueria Market for fresh produce",
+          "Afternoon: Relax at Barceloneta Beach",
+          "Late Afternoon: Explore the Port Vell area",
+          "Evening: Enjoy seafood paella by the waterfront"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Day 4 - Montjuïc & Art",
+        "activities": [
+          "Morning: Visit Montjuïc Hill and the Magic Fountain",
+          "Afternoon: Explore the National Art Museum of Catalonia",
+          "Late Afternoon: Visit the Olympic Stadium",
+          "Evening: Enjoy panoramic city views and dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Day 5 - Last Explorations & Departure",
+        "activities": [
+          "Morning: Visit the Picasso Museum",
+          "Afternoon: Last-minute shopping on Las Ramblas",
+          "Late Afternoon: Enjoy a farewell coffee at a local café",
+          "Evening: Depart from Barcelona with wonderful memories"
+        ]
+      }
+    ]
+  }
+]
+
