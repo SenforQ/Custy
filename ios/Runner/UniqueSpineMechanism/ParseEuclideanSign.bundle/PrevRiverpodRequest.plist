@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>errorActionInterval</key>
+	<string>ignoredInstructionAlignment</string>
+	<key>interactorStageBound</key>
+	<string>rapidCompleterSpacing</string>
+	<key>segueOrNumber</key>
+	<string>storageKindStyle</string>
+	<key>similarChartBrightness</key>
+	<string>rectLevelBrightness</string>
+	<key>sineFormMargin</key>
+	<string>otherConstraintEdge</string>
+	<key>staticMarginTop</key>
+	<string>dimensionOperationStatus</string>
+</dict>
+</plist>

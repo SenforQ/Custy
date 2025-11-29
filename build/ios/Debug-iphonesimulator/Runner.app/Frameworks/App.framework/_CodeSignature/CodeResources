@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		NU4+ahoQW6rJs2AOciAHgYFM7ic=
+		NHYh04OtS7qPF9Ha6DdJATKWFEA=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		Q4pEvqEnE5RvpKauMAd4/vV7fa8=
+		CX8LIUssd5pte2wJJhWP/Y2FPGk=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		FkxH16FN+bwOFr5XpUSJZWwL6u8=
+		V3DMreTZ+NncOtylE2UyX/QYRr4=
 		</data>
 		<key>flutter_assets/NativeAssetsManifest.json</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>flutter_assets/assets/app_logo.webp</key>
 		<data>
-		PfN10oCv58nIaAoN0owkixge+i0=
+		Gt6i05n4lwaepngseIvs2YB6iiw=
 		</data>
 		<key>flutter_assets/assets/barcelona_bg.webp</key>
 		<data>
@@ -718,7 +718,11 @@
 		</data>
 		<key>flutter_assets/assets/user_default.webp</key>
 		<data>
-		PfN10oCv58nIaAoN0owkixge+i0=
+		Gt6i05n4lwaepngseIvs2YB6iiw=
+		</data>
+		<key>flutter_assets/assets/welcome_custy_bg.webp</key>
+		<data>
+		V+01bcoNzv24MPNmdNHsASBwKKk=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -730,7 +734,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		F4s9bTbji1hth+IyR8VfiGGBRFA=
+		RZz9XJWek84oJlEDtCfUoK+zEoM=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -751,14 +755,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			N+i+miaIDiBYM9QSQqQCeOvWOAh3JrwFDPfjP8MHjF4=
+			440lHWoMyjrjgwbYvT5CvYub0dGw4qd/eTkNULpTJnc=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FistpzAldxLnn+4ziicUN7Rc/92sDx4texdj8KWsryU=
+			g3RrC1lA4loiAPca3/xBEnJoCTgu+SmGYSkyMv/dlFE=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -772,7 +776,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XIDAklgWfB+VN8EHp5ny0rQPuYEJ9HwnaLOthsXtwcs=
+			YqmE+wlL5uTVvGrCys8MwF7IHyROKO707GH4UoArC+Y=
 			</data>
 		</dict>
 		<key>flutter_assets/NativeAssetsManifest.json</key>
@@ -786,7 +790,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			le7uTGDNWtSboPIf7jgDLKK3sWRXmMqhztB9KZ0oBK0=
+			VC33uRNuKBaGC6opCvS04SLtTXiPrxMPpnukddBa7PE=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/barcelona_bg.webp</key>
@@ -1983,7 +1987,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			le7uTGDNWtSboPIf7jgDLKK3sWRXmMqhztB9KZ0oBK0=
+			VC33uRNuKBaGC6opCvS04SLtTXiPrxMPpnukddBa7PE=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/welcome_custy_bg.webp</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9ZvysJKnGBxjlwxBKchcOrWNRlpgdlGXos8m5fJaJoE=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -2004,7 +2015,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vxrynPutvN9Uo03VaOFZDvmbYDgb17g9tZZIRhozZEM=
+			F9R4x5DE1tfBmZqmw/SWZV0r+hhTsGkVz0HshQ7NAp0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

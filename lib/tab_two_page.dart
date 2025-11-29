@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 
+import 'services/coin_service.dart';
 import 'services/trip_storage_service.dart';
 import 'total_share_detail_page.dart';
+import 'wallet_page.dart';
 import 'widgets/base_background.dart';
 
 class TabTwoPage extends StatefulWidget {
@@ -259,11 +261,148 @@ class _TabTwoPageState extends State<TabTwoPage> {
       return;
     }
     
+    // Check coins before creating trip
+    const requiredCoins = 120;
+    final currentCoins = await CoinService.getCurrentCoins();
+    
+    if (currentCoins < requiredCoins) {
+      if (!mounted) return;
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          backgroundColor: const Color(0xFF333333),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          title: const Text(
+            'Insufficient Coins',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          content: Text(
+            'Create New Trip requires $requiredCoins Coins. You currently have $currentCoins Coins. Please purchase more coins.',
+            style: const TextStyle(
+              color: Colors.white70,
+              fontSize: 14,
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text(
+                'Cancel',
+                style: TextStyle(
+                  color: Color(0xFF999999),
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const WalletPage(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Go to Wallet',
+                style: TextStyle(
+                  color: Color(0xFFDD7BFF),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+    
+    // Show confirmation dialog
+    if (!mounted) return;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: const Color(0xFF333333),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: const Row(
+          children: [
+            Icon(Icons.info_outline, color: Color(0xFFDD7BFF)),
+            SizedBox(width: 8),
+            Text(
+              'Confirm Purchase',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        content: Text(
+          'Create New Trip will consume $requiredCoins Coins. You currently have $currentCoins Coins. Do you want to continue?',
+          style: const TextStyle(
+            color: Colors.white70,
+            fontSize: 14,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text(
+              'Cancel',
+              style: TextStyle(
+                color: Color(0xFF999999),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF933996),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+            child: const Text(
+              'Confirm',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+    
+    if (confirmed != true) {
+      return;
+    }
+    
+    // Deduct coins
+    final success = await CoinService.deductCoins(requiredCoins);
+    if (!success) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Failed to deduct coins. Please try again.'),
+          backgroundColor: Color(0xFF933996),
+        ),
+      );
+      return;
+    }
+    
     // All validations passed, handle confirm action
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Trip created successfully!'),
-        backgroundColor: Color(0xFF933996),
+      SnackBar(
+        content: Text('Trip created successfully! $requiredCoins Coins deducted.'),
+        backgroundColor: const Color(0xFF933996),
       ),
     );
     

@@ -3,8 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'services/user_profile_service.dart';
+import 'vip_page.dart';
 import 'widgets/base_background.dart';
 
 class SettingPage extends StatefulWidget {
@@ -31,6 +33,7 @@ class _SettingPageState extends State<SettingPage> {
   final ImagePicker _picker = ImagePicker();
   String? _avatarRelativePath;
   String? _avatarAbsolutePath;
+  String? _originalAvatarPath;
   bool _isLoading = true;
 
   @override
@@ -56,6 +59,7 @@ class _SettingPageState extends State<SettingPage> {
     setState(() {
       _nicknameController.text = profile.nickname;
       _avatarRelativePath = profile.avatarPath;
+      _originalAvatarPath = profile.avatarPath;
       _avatarAbsolutePath = absolutePath;
       _selectedContinents
         ..clear()
@@ -79,7 +83,75 @@ class _SettingPageState extends State<SettingPage> {
     });
   }
 
+  Future<bool> _checkVipStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool('user_vip_active') ?? false;
+  }
+
   Future<void> _handleSave() async {
+    final isVip = await _checkVipStatus();
+    
+    if (!isVip) {
+      final hasChangedAvatar = _avatarRelativePath != _originalAvatarPath;
+      
+      if (hasChangedAvatar) {
+        if (!mounted) return;
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            backgroundColor: const Color(0xFF333333),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            title: const Text(
+              'VIP Required',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            content: const Text(
+              'Avatar changes require VIP subscription. Please upgrade to VIP to change your avatar.',
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 14,
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text(
+                  'Cancel',
+                  style: TextStyle(
+                    color: Color(0xFF999999),
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const VipPage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Upgrade to VIP',
+                  style: TextStyle(
+                    color: Color(0xFFDD7BFF),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+        return;
+      }
+    }
+
     final nickname = _nicknameController.text.trim().isEmpty
         ? 'Custy'
         : _nicknameController.text.trim();

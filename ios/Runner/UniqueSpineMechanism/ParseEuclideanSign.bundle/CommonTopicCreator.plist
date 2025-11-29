@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>entropyContextRotation</key>
+	<string>specifySubpixelVisibility</string>
+	<key>flexibleChapterState</key>
+	<string>observerVersusProxy</string>
+	<key>frameStyleDistance</key>
+	<string>rowParameterSpacing</string>
+	<key>independentBufferTop</key>
+	<string>protocolIncludeStructure</string>
+	<key>radiusStrategyLocation</key>
+	<string>offsetLikeProxy</string>
+</dict>
+</plist>

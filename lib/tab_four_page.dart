@@ -8,6 +8,8 @@ import 'services/user_profile_service.dart';
 import 'setting_page.dart';
 import 'terms_custy_page.dart';
 import 'total_share_page.dart';
+import 'wallet_page.dart';
+import 'vip_page.dart';
 import 'widgets/base_background.dart';
 
 class TabFourPage extends StatefulWidget {
@@ -205,6 +207,39 @@ class _TabFourPageState extends State<TabFourPage> {
               const SizedBox(height: 24),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: _CapsuleButton(
+                        title: 'Wallet',
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const WalletPage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: _CapsuleButton(
+                        title: 'VIP',
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const VipPage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: List.generate(
                     _actionItems.length,
@@ -338,6 +373,42 @@ class _ActionItem {
   final bool openPrivacyPage;
   final bool openAboutPage;
   final bool openSettingPage;
+}
+
+class _CapsuleButton extends StatelessWidget {
+  const _CapsuleButton({
+    required this.title,
+    required this.onTap,
+  });
+
+  final String title;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      behavior: HitTestBehavior.opaque,
+      child: Container(
+        height: 44,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF7CE3FF), Color(0xFFDD7BFF)],
+          ),
+          borderRadius: BorderRadius.circular(22),
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _InfoCard extends StatelessWidget {
