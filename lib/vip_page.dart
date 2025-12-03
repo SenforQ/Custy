@@ -24,13 +24,13 @@ class VipProduct {
 
 final List<VipProduct> kVipProducts = [
   VipProduct(
-    productId: 'CustyWeeklyVIP',
+    productId: 'CustyWeekVIP',
     period: 'Per week',
     price: 12.99,
     priceText: '\$12.99',
   ),
   VipProduct(
-    productId: 'CustyMonthlyVIP',
+    productId: 'CustyMonthVIP',
     period: 'Per month',
     price: 49.99,
     priceText: '\$49.99',
